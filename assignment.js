@@ -1,6 +1,6 @@
+// https://github.com/MousumiMitu/assignment-3-BasicJS
 
-
-// Problem-1: Covertion
+// Problem-1: Covertions
 
 function kilometerToMeter (kiloMeter){
     var meter = kiloMeter * 1000;
@@ -65,13 +65,13 @@ function megaFriend (arrString){
     } 
     else{
         var longestString = 0;
-        var largestName;
+        var longestName;
         for (var i = 0; i < arrString.length; i++){
             if ( arrString[i].length > longestString){
                 longestString = arrString[i].length;
-                largestName = arrString[i];
+                longestName = arrString[i];
             }
         }
-        return largestName;
+        return longestName;
     }
 }
