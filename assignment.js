@@ -4,18 +4,18 @@
 
 function kilometerToMeter (kiloMeter){
     var meter = kiloMeter * 1000;
-    if( kiloMeter >= 1){
+    if( kiloMeter >= 0){
         return meter;
     }
     else {
-        return "kilometer value cann't be negative!!" ;
+        return "distance can't be negative!!" ;
     }
 }
 
 // Problem-2: Budget calculating
 
 function budgetCalculator( watch, mobile, laptop){
-    if ((watch, mobile, laptop) >= 1){
+    if (watch >= 0 && mobile>= 0 && laptop>= 0){
         var cost1 = watch * 50;
         var cost2 = mobile * 100;
         var cost3 = laptop * 500;
@@ -23,17 +23,15 @@ function budgetCalculator( watch, mobile, laptop){
         return total;
     }
     else {
-        return "cost amount can't be negative or zero!!"
+        return "cost amount can't be negative!!"
     }
 }
-// var result = budgetCalculator(-1,0,0);
-// console.log(result)
 
 // Problem-3: Hotel Costing
 
 function hotelCost (days){
     var cost = 0;
-    if ( days >= 1){
+    if ( days >= 0){
         if ( days <= 10){
             cost = days * 100;
         }
@@ -53,34 +51,27 @@ function hotelCost (days){
         return cost;
     }
     else{
-        return "Days input cannot be negative or zero!!";
+        return "Days input can't be negative!!";
     }
-
 }
-
-// var result = hotelCost(0);
-// console.log(result);
 
 // Problem-4: Largest string
 
-/** Sample array-
- *     var friends = ["Esha", "Rumpa","Afrin","Rifa","Tanjla"];*/
+// Sample array: var friends = ["Esha", "Rumpa","Afrin","Rifa","Tanjla"];
 
 function megaFriend (arrString){
-    if ( arrString != " "){
+    if ( arrString.length === 0 || arrString == ""){
+        return "array value can't be empty!!";
+    } 
+    else{
         var longestString = 0;
         var largestName;
         for (var i = 0; i < arrString.length; i++){
-            if( arrString[i].length > longestString){
+            if ( arrString[i].length > longestString){
                 longestString = arrString[i].length;
                 largestName = arrString[i];
             }
         }
         return largestName;
-    } 
-    else{
-        return "array value can't be empty string!!";
     }
 }
-var result = megaFriend([" "]);
-console.log(result);
