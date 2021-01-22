@@ -1,6 +1,6 @@
 // https://github.com/MousumiMitu/assignment-3-BasicJS
 
-// Problem-1: Covertions
+// Problem-1: Coversion
 
 function kilometerToMeter (kiloMeter){
     var meter = kiloMeter * 1000;
